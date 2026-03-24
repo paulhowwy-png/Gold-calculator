@@ -1,20 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Cash For Gold</h1>
+  <div class="container">
+    <h1>Gold Value Calculator</h1>
+    
+    <div class="form-group">
+      <label for="weight">Weight:</label>
+      <input type="number" id="weight" placeholder="Enter weight" step="0.01">
+    </div>
 
-<input id="w" placeholder="grams">
-<input id="p" placeholder="price per gram">
-<button onclick="r()">Calculate</button>
+    <div class="form-group">
+      <label for="unit">Unit:</label>
+      <select id="unit">
+        <option value="grams">Grams</option>
+        <option value="ounces">Ounces</option>
+      </select>
+    </div>
 
-<p id="o"></p>
+    <div class="form-group">
+      <label for="purity">Gold Purity (%):</label>
+      <select id="purity">
+        <option value="37.5">9ct (37.5%)</option>
+        <option value="58.3">14ct (58.3%)</option>
+        <option value="75">18ct (75%)</option>
+        <option value="99.9">24ct (99.9%)</option>
+      </select>
+    </div>
 
-<script>
-function r(){
-var w=document.getElementById('w').value;
-var p=document.getElementById('p').value;
-document.getElementById('o').innerText="£"+(w*p*0.375).toFixed(2);
-}
-</script>
+    <div class="form-group">
+      <label for="pricePerGram">Price Per Gram (£):</label>
+      <input type="number" id="pricePerGram" placeholder="Enter price per gram" step="0.01">
+    </div>
 
+    <button id="calculateBtn">Calculate Value</button>
+
+    <div id="result" class="result">
+      <h2>Results</h2>
+      <p><strong>Total Weight:</strong> <span id="weightDisplay">0</span> grams</p>
+      <p><strong>Gold Purity:</strong> <span id="purityDisplay">0</span>%</p>
+      <p><strong>Pure Gold Weight:</strong> <span id="pureGoldDisplay">0</span> grams</p>
+      <p><strong>Total Value:</strong> £<span id="totalValue">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
