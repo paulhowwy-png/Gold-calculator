@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1>Cash For Gold</h1>
+
+<input id="w" placeholder="grams">
+<input id="p" placeholder="price per gram">
+<button onclick="r()">Calculate</button>
+
+<p id="o"></p>
+
+<script>
+function r(){
+var w=document.getElementById('w').value;
+var p=document.getElementById('p').value;
+document.getElementById('o').innerText="£"+(w*p*0.375).toFixed(2);
+}
+</script>
+
+</body>
+</html>
