@@ -1,0 +1,25 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #ffb300, #ff6f00); min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+
+.container { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); max-width: 500px; width: 100%; }
+
+h1 { color: #ff6f00; text-align: center; margin-top: 0; }
+
+.form-group { margin-bottom: 1.5rem; }
+
+label { display: block; margin-bottom: 0.5rem; color: #333; font-weight: bold; }
+
+input, select { width: 100%; padding: 0.75rem; border: 2px solid #ffb300; border-radius: 5px; font-size: 1rem; box-sizing: border-box; }
+
+input:focus, select:focus { outline: none; border-color: #ff6f00; }
+
+button { width: 100%; padding: 0.75rem; background-color: #ff6f00; color: white; border: none; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+
+button:hover { background-color: #e65100; }
+
+.result { margin-top: 2rem; padding: 1.5rem; background-color: #fff8e1; border-left: 4px solid #ff6f00; border-radius: 5px; display: none; }
+
+.result.show { display: block; }
+
+.result h2 { color: #ff6f00; margin-top: 0; }
+
+.result p { margin: 0.5rem 0; color: #333; }
